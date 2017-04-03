@@ -223,17 +223,20 @@
         //attach initial data
         d3.csv("zika_SA_sample.csv", function(error, data) {
             var formatDate = d3.time.format("%Y-%m-%d");
-            var minDate = Date("2015-11-28")
+            var minDate = new Date("2016-04-02")
             console.log("Minimum date " + minDate)
             data.forEach(function(d) {
-                d.date = formatDate.parse(d.report_date);
-                //console.log("Date : " + d.date);
+                //d.date = formatDate.parse(d.report_date);
+                d.date = new Date(d.report_date);
+
                 d.lon = +d.lon
                 d.lat = +d.lat
             });
 
             data = data.filter(function(row) {
-                return formatDate.parse(row.report_date) === minDate;
+                console.log(row.report_date)
+                console.log(row.date)
+                return row.date.getTime() == minDate.getTime();
             })
             g.selectAll("circle")
                 .data(data)
@@ -247,7 +250,7 @@
                     return projection([d.lon, d.lat])[1];
                 })
                 .attr("r", 1)
-                .style("fill", "red");
+                .style("fill", "yellow");
         });
 
     </script>
