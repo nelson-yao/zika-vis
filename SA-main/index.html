@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="d3.slider.css" />
     <style>
         body {
             background-color: white;
@@ -36,6 +37,12 @@
             text-shadow: #f5f5f5 0 1px 0;
             opacity: 0.9;
             position: absolute;
+        }
+        
+        .site {
+            stroke-width: .5px;
+            stroke: #333;
+            fill: #9cf;
         }
         
         #slider3 {
@@ -169,6 +176,36 @@
                 .attr("d", path);
 
             states = d3.selectAll('.state');
+
+            //attach initial data
+            d3.csv("zika_SA_sample.csv", function(error, data) {
+                    //var formatDate = d3.time.format("%Y-%m-%d");
+                    var minDate = moment("2016-04-02", "YYYY MM DD").unix();
+                    data.forEach(function(d) {
+                        d.date = moment(d.report_date, "YYYY-MM-DD HH:mm:ss").unix()
+                        d.lon = +d.lon
+                        d.lat = +d.lat
+                    });
+
+                    var filtered = data.filter(function(row) {
+                        return row.date < minDate;
+                    })
+                    //                    g.selectAll(".site")
+                    //                        .data(filtered).enter()
+                    //                        .append("a").append("circle")
+                    //                        .attr("cx", function(d) {
+                    //                            return projection([d.lon, d.lat])[0];
+                    //                        }).attr("cy", function(d) {
+                    //                            return projection([d.lon, d.lat])[1];
+                    //                        }).attr("r", 1).style("fill", "red");
+
+
+                })
+                .get(function(err, rows) {
+                    if (err) return console.error(err);
+
+                    window.site_data = rows;
+                });
         });
 
 
@@ -234,50 +271,23 @@
 
         }
 
-        //attach initial data
-        d3.csv("zika_SA_sample.csv", function(error, data) {
-                //var formatDate = d3.time.format("%Y-%m-%d");
-                var minDate = moment("2016-04-02", "YYYY MM DD").unix();
-                console.log("Minimum date " + minDate)
-                data.forEach(function(d) {
-                    d.date = moment(d.report_date, "YYYY-MM-DD HH:mm:ss").unix()
-                    d.lon = +d.lon
-                    d.lat = +d.lat
-                });
 
-
-                var filtered = data.filter(function(row) {
-                    return row.date < minDate;
-                })
-                g.selectAll("circle")
-                    .data(filtered).enter()
-                    .append("a").append("circle")
-                    .attr("cx", function(d) {
-                        return projection([d.lon, d.lat])[0];
-                    }).attr("cy", function(d) {
-                        return projection([d.lon, d.lat])[1];
-                    }).attr("r", 1).style("fill", "red");
-            })
-            .get(function(err, rows) {
-                if (err) return console.error(err);
-
-                window.site_data = rows;
-            });
+        //            .get(function(err, rows) {
+        //                if (err) return console.error(err);
+        //                window.site_data = rows;
+        //            });
 
 
         var displaySites = function(data) {
             var sites = svg.selectAll(".site")
-                .data(data, function(d) {
-                    return d.permalink;
-                });
-
+                .data(data)
             sites.enter().append("circle")
                 .attr("class", "site")
                 .attr("cx", function(d) {
-                    return projection([d.lng, d.lat])[0];
+                    return projection([d.lon, d.lat])[0];
                 })
                 .attr("cy", function(d) {
-                    return projection([d.lng, d.lat])[1];
+                    return projection([d.lon, d.lat])[1];
                 })
                 .attr("r", 1)
                 .transition().duration(400)
@@ -293,13 +303,14 @@
         var maxDateUnix = moment('2016-07-02', "YYYY MM DD").unix();
         var secondsInDay = 60 * 60 * 24;
 
-        d3.select('#slider3').call(d3.slider()
+        d3.select('#slider3').call(
+            d3.slider()
             .axis(true).min(minDateUnix).max(maxDateUnix).step(secondsInDay)
             .on("slide", function(evt, value) {
                 var newData = _(site_data).filter(function(site) {
-                    return site.date < value;
+                    var date = moment(site.report_date, "YYYY-MM-DD").unix()
+                    return date < value;
                 })
-                // console.log("New set size ", newData.length);
 
                 displaySites(newData);
             })
