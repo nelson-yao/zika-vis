@@ -15,12 +15,12 @@
         }
         
         .selected {
-            fill: #46ebe8;
+            fill: #99ccff;
         }
         
         .boundary {
-            fill: blue;
-            stroke: white;
+            fill: white;
+            stroke: black;
             stroke-width: 1px;
         }
         
@@ -43,6 +43,8 @@
             stroke-width: .5px;
             stroke: #333;
             fill: #9cf;
+            opacity: 0.5 ;
+            
         }
         
         #slider3 {
@@ -70,7 +72,7 @@
     <script>
         var width = 962,
             rotated = 90,
-            height = 700;
+            height = 1000;
 
         //countries which have states, needed to toggle visibility
         //for USA/ etc. either show countries or states, not both
@@ -82,14 +84,15 @@
         var s = 1;
         var mouseClicked = false;
 
-
+        // initial position of projection
         var projection = d3.geo.mercator()
-            .scale(153)
-            .translate([width / 2, height / 1.5])
+            .center([0, -25])
+            .scale(600)
+            .translate([300, height / 1.5])
             .rotate([rotated, 0, 0]); //center on USA because 'murica
 
         var zoom = d3.behavior.zoom()
-            .scaleExtent([1, 20])
+            .scaleExtent([1, 10])
             .on("zoom", zoomed);
 
         var svg = d3.select("body").append("svg")
@@ -311,7 +314,6 @@
                     var date = moment(site.report_date, "YYYY-MM-DD").unix()
                     return date < value;
                 })
-
                 displaySites(newData);
             })
         );
