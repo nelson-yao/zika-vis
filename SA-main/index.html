@@ -43,7 +43,7 @@
             stroke-width: .5px;
             stroke: white;
             fill: pink;
-            opacity: 0.5;
+            opacity: 0.8;
         }
         
         #slider3 {
@@ -333,7 +333,7 @@
                 .attr("r", 2);
 
             sites.exit()
-                //.transition().duration(200)
+                .transition().duration(50)
                 .attr("r", 0)
                 .remove();
         };
@@ -353,9 +353,6 @@
                 displaySites(newData);
             })
         );
-
-
-
 
         //            .get(function(err, rows) {
         //                if (err) return console.error(err);
