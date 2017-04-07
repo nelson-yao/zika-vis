@@ -42,7 +42,7 @@
         .site {
             stroke-width: .5px;
             stroke: white;
-            fill: pink;
+            fill: red;
             opacity: 0.8;
         }
         
@@ -341,13 +341,19 @@
         var minDateUnix = moment('2015-12-05', "YYYY MM DD").unix();
         var maxDateUnix = moment('2016-07-02', "YYYY MM DD").unix();
         var secondsInDay = 60 * 60 * 24;
+        
+        var minDate = new Date(2015, 12, 05);
+        var maxDate = new Date(2016, 07 ,02);
 
         d3.select('#slider3').call(
             d3.slider()
-            .axis(true).min(minDateUnix).max(maxDateUnix).step(secondsInDay)
+            .axis(true)
+//            .min(minDate).max(maxDate).step(new Date(1))
+            .scale(d3.time.scale().domain([new Date(2015,12,05), new Date(2016,07,02)])).axis(d3.svg.axis())
             .on("slide", function(evt, value) {
                 var newData = _(site_data).filter(function(site) {
-                    var date = moment(site.report_date, "YYYY-MM-DD").unix()
+                    //var date = moment(site.report_date, "YYYY-MM-DD").unix()
+                    var date = new Date(site.report_date)
                     return date < value;
                 })
                 displaySites(newData);
