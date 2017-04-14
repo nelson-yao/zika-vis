@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <h1>Cumulaitve Zika Reports</h1>
     <meta charset="utf-8">
     <link rel="stylesheet" href="d3.slider.css" />
     <style>
@@ -262,7 +263,7 @@
             states = d3.selectAll('.state');
 
             //attach initial data
-            d3.csv("zika_SA_sample.csv", function(error, data) {
+            d3.csv("zika_SA_clean.csv", function(error, data) {
                     //var formatDate = d3.time.format("%Y-%m-%d");
                     var minDate = moment("2016-04-02", "YYYY MM DD").unix();
                     data.forEach(function(d) {
@@ -317,7 +318,7 @@
         }
 
 
-        var colorScale =  d3.scale.linear().domain([0,300]).range([255,0]);
+        var colorScale = d3.scale.linear().domain([0, 300]).range([255, 0]);
         var displaySites = function(data) {
             var sites = g.selectAll(".site")
                 .data(data)
@@ -334,18 +335,34 @@
                 })
                 .attr("r", 0)
                 .transition().duration(300)
-                .attr("r", 5)
-                .style("fill", function(d){
-                //console.log(d.location, d.cumulative_cases);
-                return d3.rgb(colorScale(d.cumulative_cases),0, 0);
-            })
-            ;
-
+                .attr("r", 2)
+                .style("fill", function(d) {
+                    //console.log(d.location, d.cumulative_cases);
+                    return d3.rgb(colorScale(d.cumulative_cases), 0, 0);
+                });
             sites.exit()
                 .transition().duration(50)
                 .attr("r", 0)
                 .remove();
         };
+
+        // color gradient legend
+        var defs = svg.append("defs");
+        var linearGradient = defs.append("linearGradient")
+            .attr("id", "linear-gradient")
+            .attr("transform", "translate(41," + height * 0.2 + ")")
+            .attr("x1", "100%").attr("y1", "0%").attr("x2", "100%").attr("y2", "100%").attr("spreadMethod", "pad");
+        linearGradient.append("stop")
+            .attr("offset", "0%")
+            .attr("stop-color", "#ffa474");
+        linearGradient.append("stop")
+            .attr("offset", "100%")
+            .attr("stop-color", "#8b0000");
+
+        var y = d3.scale.linear().range([300, 0]).domain([0, 300]);
+        var yAxis = d3.svg.axis().scale(y).orient("right");
+
+        svg.append("g").attr("class", "y axis").attr("transform", "translate(41," + height * 0.2 + ")").call(yAxis).append("text").attr("transform", "rotate(-90)").attr("y", 45).attr("dy", ".71em").style("text-anchor", "end").text("Cumulative Zika Reports");
 
         var minDateUnix = moment('2015-12-05', "YYYY MM DD").unix();
         var maxDateUnix = moment('2016-07-02', "YYYY MM DD").unix();
@@ -360,8 +377,8 @@
         d3.select('#slider3').call(
             d3.slider()
             .axis(true)
-            //            .min(minDate).max(maxDate).step(new Date(1))
             .scale(d3.time.scale().domain([minDate, maxDate]))
+            //.snap(true)
             .axis(d3.svg.axis())
             .on("slide", function(evt, value) {
                 var filterByTime = _(site_data)
@@ -397,11 +414,6 @@
                 displaySites(groupByLocation);
             })
         );
-
-        //            .get(function(err, rows) {
-        //                if (err) return console.error(err);
-        //                window.site_data = rows;
-        //            });
 
     </script>
 </body>
