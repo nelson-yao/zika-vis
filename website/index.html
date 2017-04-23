@@ -144,7 +144,7 @@
 
         <div class="starter-template">
             <h1>Visualizing 2015-2016 Zika Epidemic </h1>
-            <p class="lead">Making sense of the trend.<br> See how it happened and who are affected.</p>
+            <p class="lead">Making sense of the trend.</p>
         </div>
 
     </div>
@@ -154,13 +154,10 @@
     <section class="primary" id="about">
         <div class="container">
 
-            <div class="page-header">
-                <h2>Background</h2>
+            <div class="starter-template">
+                <h2 "text-align:center;">Background</h2>
             </div>
-
             <p>An outbreak of the Zika virus, an infection transmitted mostly by the Aedes species mosquito (Ae. aegypti and Ae. albopictus), has been sweeping across the Americas and the Pacific since mid-2015. Although first isolated in 1947 in Uganda, a lack of previous research has challenged the scientific community to quickly understand its devastating effects as the epidemic continues to spread. The virus is typically transmitted from infected pregnant mother to the fetus, and can cause severe birth defect and neurological damage in the newborn. In February, WHO declared the outbreak a "Public Health Emergency of International Concern". </p>
-
-
 
         </div>
 
@@ -168,16 +165,24 @@
 
     <section class="primary" id="geo">
         <div class="container" id="geo">
-            <div class="page-header">
-                <h2>Geographic</h2>
+            <div class="starter-template">
+                <h2 "text-align:center;">Geographic Information</h2>
             </div>
             <p> Which countries have the most confirmed cases? How is the spread evolving over time?</p>
-            <p> The visualization below allows you to see the spread and in time to see the impact. The size of the buble reflects number of cumulative confirmed cases in the region. .</p>
-            <p> The results have presumably changed with the cleaned-up data, of course: Columbia has by far the most confirmed reports of Zika cases, Brazil and Ecuador have the second and third most confirmed cases.</p>
+
+
         </div>
 
         <div class="container">
-            <h3> Visualizing Geographical Location </h3>
+        </div>
+        <div class="container">
+            <p> The visualization below allows you to see the spread and in time to see the progressing and impact in each region of the world relative to each other. The data are aggregated at the province/state level. The size of the bubble reflects number of cumulative confirmed cases in the region.</p>
+            <p style="font-size:110%">Usage:</p>
+            <ul>
+            <li>Use the slider bar at the top of the map to move to different points in time.</li>
+            <li>Zoom in on any part of the map by double clikcing or using mouse wheel/touchpad.</li>
+            <li>Drag the map to move to different locations after zooming </li>
+            </ul>
         </div>
         <div id="slider3"></div>
         <div id="map"></div>
@@ -211,14 +216,6 @@
                 .domain([0, height])
                 .range([height, 0]);
 
-            //            var xAxisScale = d3.scale.linear()
-            //                .domain([panExtent.x[0] > (-width / 2) ? panExtent.x[0] : (-width / 2), panExtent.x[1] < (width / 2) ? panExtent.x[1] : (width / 2)])
-            //                .range([0, width]);
-            //
-            //            var yAxisScale = d3.scale.linear()
-            //                .domain([panExtent.y[0] > (-height / 2) ? panExtent.y[0] : (-height / 2), panExtent.y[1] < (height / 2) ? panExtent.y[1] : (height / 2)])
-            //                .range([height, 0]);
-
             // initial position of projection
             var projection = d3.geo.mercator()
                 .center([0, -25])
@@ -238,21 +235,21 @@
                 s = d3.event.scale;
                 var h = 0;
 
-//                t[0] = Math.min(
-//                    (width / height) * (s - 1),
-//                    Math.max(width * (1 - s), t[0])
-//                );
-//
-//                t[1] = Math.min(
-//                    h * (s - 1) + h * s,
-//                    Math.max(height * (1 - s) - h * s, t[1])
-//                );
+                //                t[0] = Math.min(
+                //                    (width / height) * (s - 1),
+                //                    Math.max(width * (1 - s), t[0])
+                //                );
+                //
+                //                t[1] = Math.min(
+                //                    h * (s - 1) + h * s,
+                //                    Math.max(height * (1 - s) - h * s, t[1])
+                //                );
 
                 zoom.translate(t);
-//                if (s === 1 && mouseClicked) {
-//                    rotateMap(d3.mouse(this)[0])
-//                    return;
-//                }
+                //                if (s === 1 && mouseClicked) {
+                //                    rotateMap(d3.mouse(this)[0])
+                //                    return;
+                //                }
 
                 g.attr("transform", "translate(" + t + ")scale(" + s + ")");
 
@@ -264,15 +261,15 @@
                     .style("stroke-width", 1 / s);
 
                 //toggle state/USA visability
-//                if (s >= 0) {
-//                    states.classed('hidden', false);
-//                    usa.classed('hidden', false);
-//                    canada.classed('hidden', true);
-//                } else {
-//                    states.classed('hidden', false);
-//                    usa.classed('hidden', false);
-//                    canada.classed('hidden', false);
-//                };
+                //                if (s >= 0) {
+                //                    states.classed('hidden', false);
+                //                    usa.classed('hidden', false);
+                //                    canada.classed('hidden', true);
+                //                } else {
+                //                    states.classed('hidden', false);
+                //                    usa.classed('hidden', false);
+                //                    canada.classed('hidden', false);
+                //                };
                 var circles = d3.select("svg").selectAll("circle");
                 circles
                     .attr("cx", function(d, i) {
@@ -281,9 +278,9 @@
                     .attr("cy", function(d, i) {
                         return projection([xAxisScale(d.cx), yAxisScale(d.cy)])[1]
                     })
-//                    .attr("d", path.projection(projection))
-//                    .attr("transform", "translate(" + t + ")scale(" + s + ")")
-                .attr("transform", "translate(" + t + ")");
+                    //                    .attr("d", path.projection(projection))
+                    //                    .attr("transform", "translate(" + t + ")scale(" + s + ")")
+                    .attr("transform", "translate(" + t + ")");
 
 
                 var legends = d3.selectAll(".legend").selectAll("circle");
@@ -325,20 +322,20 @@
                 .attr("height", height)
                 .attr("id", "SVGmain")
                 //track where user clicked down
-//                                .on("mousedown", function() {
-//                                    d3.event.preventDefault();
-//                                    //only if scale === 1
-//                                    if (s !== 1) return;
-//                                    initX = d3.mouse(this)[0];
-//                                    mouseClicked = true;
-//                                })
-//                                .on("mouseup", function() {
-//                                    if (s !== 1) return;
-//                                    rotated = rotated + ((d3.mouse(this)[0] - initX) * 360 / (s * width));
-//                                    mouseClicked = false;
-//                                })
+                //                                .on("mousedown", function() {
+                //                                    d3.event.preventDefault();
+                //                                    //only if scale === 1
+                //                                    if (s !== 1) return;
+                //                                    initX = d3.mouse(this)[0];
+                //                                    mouseClicked = true;
+                //                                })
+                //                                .on("mouseup", function() {
+                //                                    if (s !== 1) return;
+                //                                    rotated = rotated + ((d3.mouse(this)[0] - initX) * 360 / (s * width));
+                //                                    mouseClicked = false;
+                //                                })
                 .call(zoom.on("zoom", zoomed));
-//                .attr("transform", "translate(1,1)scale(1,1)");
+            //                .attr("transform", "translate(1,1)scale(1,1)");
 
 
             function rotateMap(endX) {
@@ -628,11 +625,11 @@
     </section>
 
     <section class="primary" id="time">
-        <div class="container" id="time">
+        <div class="starter-template" id="time">
             <div class="page-header">
                 <h2>Temporal</h2>
             </div class="container">
-            <p> How is the spread evolving over time?</p>
+            <p> How does the cases compare to each other?</p>
             <div class='tableauPlaceholder' id='viz1492851132584' style='position: relative'><noscript><a href='#'><img alt='Confirmed Zika Cases Per Country ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zi&#47;ZikaVirusEpidemic&#47;ConfirmedZikaCasesPerCountry&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ZikaVirusEpidemic&#47;ConfirmedZikaCasesPerCountry' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zi&#47;ZikaVirusEpidemic&#47;ConfirmedZikaCasesPerCountry&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
             <script type='text/javascript'>
                 var divElement = document.getElementById('viz1492851132584');
@@ -659,7 +656,7 @@
     </section>
 
     <section id="demographic">
-        <div class="container">
+        <div class="starter-template">
             <div class="page-header">
                 <h2>Demographic</h2>
             </div>
@@ -690,12 +687,12 @@
     </section>
 
     <section id="data">
-        <div class="container">
+        <div class="starter-template">
             <div class="page-header">
                 <h2>About the Data</h2>
             </div>
-            <p>The dataset from CDC is publicly available data related to the ongoing Zika epidemic. It was provided as a resource to the scientific community engaged in the public health response. However, some data provided here is not official and should be considered provisional and non-exhaustive. The data in reports may change over time, reflecting delays in reporting or changes in classifications, and while accurate representation of the reported data is the objective in the machine readable files we used, that accuracy was not guaranteed. Before using any of insights or data below, it is advisable to review the original reports and sources, which are provided whenever possible along with further information on CDC Zika epidemic GitHub.</p>
-            <p>Before using any of tour analysis or the data, it is advisable to review the original reports and sources, which are provided whenever possible along with further information in below sections.</p>
+            <p>The dataset from CDC is publicly available data related to the ongoing Zika epidemic. It was provided as a resource to the scientific community engaged in the public health response. However, some data provided here is not official and should be considered provisional and non-exhaustive. Before using any of insights or data below, it is advisable to review the original reports and sources, which are provided whenever possible along with further information on CDC Zika epidemic GitHub.</p>
+
             <p>The dataset used from CDC Zika github repo includes the following fields:</p>
             <p> report_date - The report date is the date that the report was published. The date should be specified in standard ISO format (YYYY-MM-DD).</p>
             <p> location - A location is specified for each observation following the specific names specified in the country place name database. This may be any place with a 'location_type' as listed below, e.g. city, state, country, etc. It should be specified at up to three hierarchical levels in the following format: [country]-[state/province]-[county/municipality/city], always beginning with the country name. If the data is for a particular city, e.g. Salvador, it should be specified: Brazil-Bahia-Salvador.</p>
@@ -707,12 +704,11 @@
             <p> time_period_type - Required only if 'time_period' is specified. Types will also be specified in the country data guide. Otherwise should be NA.</p>
             <p> value - The observation indicated for the specific 'report_date', 'location', 'data_field' and when appropriate, 'time_period'.</p>
             <p> unit - The unit of measurement for the 'data_field'. This should conform to the 'data_field' unit options as described in the country-specific data guide.</p>
-            </p>
         </div>
     </section>
 
     <section id="contribute">
-        <div class="container">
+        <div class="starter-template">
             <div class="page-header">
                 <h2>Contribute</h2>
             </div>
