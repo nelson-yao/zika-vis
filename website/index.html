@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Zika Virus Epidemic 2015-2016</title>
+    <title>The Spread of the Zika Virus</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -110,20 +110,25 @@
         }
 
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+<!--     <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="standard">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
-                <a class="navbar-brand" href="#">Zika Virus Epidemic</a>
+          	</button>
+                <a class="navbar-brand" href="#">The Zika Epidemic</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -131,57 +136,87 @@
                     <li><a href="#geo">Geographic</a></li>
                     <li><a href="#time">Temporal</a></li>
                     <li><a href="#demographic">Demographic</a></li>
-                    <li><a href="#data">About the data</a></li>
-                    <li><a href="#contribute">Contribute</a></li>
-                    <li><a href="#other">Other</a></li>
+                    <li><a href="#data">The Data</a></li>
+                    <li><a href="#contribute">Take Action</a></li>
+                    <li><a href="#other">Additional Resources</a></li>
+                    <li><a href="#team">Team Members</a></li>
                 </ul>
             </div>
-            <!--/.nav-collapse -->
         </div>
+    </nav> -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">The Spread of the Zika Virus</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          	<li><a href="#about">Background</a></li>
+          	<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Analysis <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#geo">Geographic</a></li>
+                <li><a href="#time">Temporal</a></li>
+                <li><a href="#demographic">Demographic</a></li>
+              </ul>
+            </li>
+            <li><a href="#contribute">Take Action</a></li>
+            <li><a href="#data">The Data</a></li>
+            <li><a href="#other">Additional Resources</a></li>
+            <li><a href="#team">Team Members</a></li>	
+          </ul>
+          
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
     </nav>
 
     <div class="container">
 
         <div class="starter-template">
-            <h1>Visualizing 2015-2016 Zika Epidemic </h1>
-            <p class="lead">Making sense of the trend.</p>
+            <h1>Visualizing the 2015-2016 Zika Epidemic</h1>
+            <p class="lead">Making sense of the trends</p>
         </div>
 
     </div>
+
+<!-- 	<div class="page-header">
+	  <h1 align="center">Visualizing the 2015-2016 Zika Epidemic <br /><small><font color=#0C47A2>Making sense of the trends</font></small></h1>
+	</div> -->
 
     <!-- /.container -->
 
     <section class="primary" id="about">
         <div class="container">
 
-            <div class="starter-template">
-                <h2 "text-align:center;">Background</h2>
+            <div class="page-header">
+                <h2>Background</h2>
             </div>
-            <p>An outbreak of the Zika virus, an infection transmitted mostly by the Aedes species mosquito (Ae. aegypti and Ae. albopictus), has been sweeping across the Americas and the Pacific since mid-2015. Although first isolated in 1947 in Uganda, a lack of previous research has challenged the scientific community to quickly understand its devastating effects as the epidemic continues to spread. The virus is typically transmitted from infected pregnant mother to the fetus, and can cause severe birth defect and neurological damage in the newborn. In February, WHO declared the outbreak a "Public Health Emergency of International Concern". </p>
-
+            <p>An outbreak of the Zika virus, an infection transmitted mostly by the Aedes species mosquito (Ae. aegypti and Ae. albopictus), has been sweeping across the Americas and the Pacific since mid-2015. Although first isolated in 1947 in Uganda, a lack of research has challenged the scientific community to quickly understand its devastating effects as the epidemic continues to spread. The virus is typically transmitted from infected, pregnant mothers to her fetus, and can cause severe birth defects and neurological damage in newborn babies. In February, the World Health Organization (WHO) declared the outbreak a "Public Health Emergency of International Concern".  In this website, we will explore three perspectives on the spread of the Zika virus: geographic, temporal, and demographic.</p>
         </div>
 
     </section>
 
     <section class="primary" id="geo">
         <div class="container" id="geo">
-            <div class="starter-template">
-                <h2 "text-align:center;">Geographic Information</h2>
+            <div class="page-header">
+                <h2>Geographic Perspective</h2>
             </div>
-            <p> Which countries have the most confirmed cases? How is the spread evolving over time?</p>
-
-
-        </div>
-
-        <div class="container">
-        </div>
-        <div class="container">
-            <p> The visualization below allows you to see the spread and in time to see the progressing and impact in each region of the world relative to each other. The data are aggregated at the province/state level. The size of the bubble reflects number of cumulative confirmed cases in the region.</p>
-            <p style="font-size:110%">Usage:</p>
+            <p> The visualization below allows you to understand the spread of the Zika virus over time and understand its impact in each region of the world relative to each other. The data are aggregated at the province/state level. The size of the bubble reflects the number of cumulative confirmed cases in the region.</p>
+            <p> <u>Tips for using the map:</u> </p>
             <ul>
-            <li>Use the slider bar at the top of the map to move to different points in time.</li>
-            <li>Zoom in on any part of the map by double clikcing or using mouse wheel/touchpad.</li>
-            <li>Drag the map to move to different locations after zooming </li>
+            <li>Use the slider at the top of the map to move to different points in time.</li>
+            <li>Zoom in on any part of the map by double clicking or using your scroll wheel/touchpad.</li>
+            <li>After zooming, drag the map to move to different locations</li>
             </ul>
         </div>
         <div id="slider3"></div>
@@ -622,132 +657,111 @@
             );
 
         </script>
+
+    </section>
+
+    <section class="primary" id="geo2">
+        <div class="container">
+        	<div class='tableauPlaceholder' id='viz1493144625580' style='position: relative'><noscript><a href='#'><img alt='Confirmed Microcephaly Cases in Brazil ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;TableauDashboardv8&#47;ConfirmedMicrocephalyCasesinBrazil&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='TableauDashboardv8&#47;ConfirmedMicrocephalyCasesinBrazil' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;TableauDashboardv8&#47;ConfirmedMicrocephalyCasesinBrazil&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1493144625580');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    	</div>
+
     </section>
 
     <section class="primary" id="time">
-        <div class="starter-template" id="time">
+        <div class="container" id="time">
             <div class="page-header">
-                <h2>Temporal</h2>
+                <h2>Temporal Perspective</h2>
             </div class="container">
-            <p> How does the cases compare to each other?</p>
-            <div class='tableauPlaceholder' id='viz1492851132584' style='position: relative'><noscript><a href='#'><img alt='Confirmed Zika Cases Per Country ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zi&#47;ZikaVirusEpidemic&#47;ConfirmedZikaCasesPerCountry&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ZikaVirusEpidemic&#47;ConfirmedZikaCasesPerCountry' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zi&#47;ZikaVirusEpidemic&#47;ConfirmedZikaCasesPerCountry&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1492851132584');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width = '100%';
-                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            <p>Next, we will explore how the virus is spreading over time.</p>
 
-            </script>
-            <div class='tableauPlaceholder' id='viz1492851409782' style='position: relative'><noscript><a href='#'><img alt='Small Multiples ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zi&#47;ZikaVirusEpidemic&#47;SmallMultiples&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ZikaVirusEpidemic&#47;SmallMultiples' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zi&#47;ZikaVirusEpidemic&#47;SmallMultiples&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1492851409782');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width = '100%';
-                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    		<div class='tableauPlaceholder' id='viz1493144191367' style='position: relative'><noscript><a href='#'><img alt='Confirmed Zika Cases by Country (Cumulative) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;TableauDashboardv8&#47;ConfirmedZikaCasesbyCountryCumulative&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='TableauDashboardv8&#47;ConfirmedZikaCasesbyCountryCumulative' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;TableauDashboardv8&#47;ConfirmedZikaCasesbyCountryCumulative&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1493144191367');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
             </script>
         </div>
     </section>
 
     <section id="demographic">
-        <div class="starter-template">
+        <div class="container">
             <div class="page-header">
-                <h2>Demographic</h2>
+                <h2>Demographic Perspective</h2>
             </div>
-            <p> What can we learn about impact of ebola on age or gender?</p>
-            <div class='tableauPlaceholder' id='viz1492851660354' style='position: relative'><noscript><a href='#'><img alt='Age Distribution Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zi&#47;ZikaVirusEpidemic&#47;AgeDistributionDashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ZikaVirusEpidemic&#47;AgeDistributionDashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zi&#47;ZikaVirusEpidemic&#47;AgeDistributionDashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1492851660354');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width = '1004px';
-                vizElement.style.height = '869px';
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            <p>Finally, we will take a closer look at how the Zika virus is affecting specific demographic groups.</p>
 
-            </script>
-            <div class='tableauPlaceholder' id='viz1492851707387' style='position: relative'><noscript><a href='#'><img alt='Gender ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zi&#47;ZikaVirusEpidemic&#47;Gender&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ZikaVirusEpidemic&#47;Gender' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zi&#47;ZikaVirusEpidemic&#47;Gender&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1492851707387');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width = '100%';
-                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-
-            </script>
+            <div class='tableauPlaceholder' id='viz1493144580759' style='position: relative'><noscript><a href='#'><img alt='Confirmed Zika Cases by Demographic Group ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;TableauDashboardv8&#47;ConfirmedZikaCasesbyDemographicGroup&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='TableauDashboardv8&#47;ConfirmedZikaCasesbyDemographicGroup' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;TableauDashboardv8&#47;ConfirmedZikaCasesbyDemographicGroup&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1493144580759');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
         </div>
-    </section>
 
-    <section id="data">
-        <div class="starter-template">
-            <div class="page-header">
-                <h2>About the Data</h2>
-            </div>
-            <p>The dataset from CDC is publicly available data related to the ongoing Zika epidemic. It was provided as a resource to the scientific community engaged in the public health response. However, some data provided here is not official and should be considered provisional and non-exhaustive. Before using any of insights or data below, it is advisable to review the original reports and sources, which are provided whenever possible along with further information on CDC Zika epidemic GitHub.</p>
-
-            <p>The dataset used from CDC Zika github repo includes the following fields:</p>
-            <p> report_date - The report date is the date that the report was published. The date should be specified in standard ISO format (YYYY-MM-DD).</p>
-            <p> location - A location is specified for each observation following the specific names specified in the country place name database. This may be any place with a 'location_type' as listed below, e.g. city, state, country, etc. It should be specified at up to three hierarchical levels in the following format: [country]-[state/province]-[county/municipality/city], always beginning with the country name. If the data is for a particular city, e.g. Salvador, it should be specified: Brazil-Bahia-Salvador.</p>
-            <p> location_type - A location code is included indicating: city, district, municipality, county, state, province, or country. If there is need for an additional 'location_type', open an Issue to create a new 'location_type'.</p>
-            <p> report_date - The report date is the date that the report was published. The date should be specified in standard ISO format (YYYY-MM-DD).</p>
-            <p> data_field - The data field is a short description of what data is represented in the row and is related to a specific definition defined by the report from which it comes.</p>
-            <p> data_field_code - This code is defined in the country data guide. It includes a two letter country code (ISO-3166 alpha-2, list), followed by a 4-digit number corresponding to a specific report type and data type.</p>
-            <p> time_period - Optional. If the data pertains to a specific period of time, for example an epidemiological week, that number should be indicated here and the type of time period in the 'time_period_type', otherwise it should be NA.</p>
-            <p> time_period_type - Required only if 'time_period' is specified. Types will also be specified in the country data guide. Otherwise should be NA.</p>
-            <p> value - The observation indicated for the specific 'report_date', 'location', 'data_field' and when appropriate, 'time_period'.</p>
-            <p> unit - The unit of measurement for the 'data_field'. This should conform to the 'data_field' unit options as described in the country-specific data guide.</p>
+		<div class="container">
+            <div class='tableauPlaceholder' id='viz1493144453321' style='position: relative'><noscript><a href='#'><img alt='Confirmed Zika Cases by Gender ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;TableauDashboardv8&#47;ConfirmedZikaCasesbyGender&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='TableauDashboardv8&#47;ConfirmedZikaCasesbyGender' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;TableauDashboardv8&#47;ConfirmedZikaCasesbyGender&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1493144453321');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
         </div>
     </section>
 
     <section id="contribute">
-        <div class="starter-template">
+        <div class="container">
             <div class="page-header">
-                <h2>Contribute</h2>
+                <h2>Take Action</h2>
             </div>
-            <p> 3 ways to contribute:</p>
-            <p><a href="https://github.com/cdcepi/zika/blob/master/how_to_contribute.md">   1. Add to the CDC Zika repo</a> </p>
-            <p><a href="https://www.kaggle.com/cdc/zika-virus-epidemic">   2. Participate in the Kaggle analysis of CDC Zika data</a> </p>
-            <p><a href="mailto:siddharth.singhal@berkeley.edu">   3.  This visualization</a> - share your opinions and thoughts</p>
+            <p> There are three ways that you can contribute:</p>
+            <ol>
+	            <li><a href="https://github.com/cdcepi/zika/blob/master/how_to_contribute.md">Add to the CDC's Zika repository</a> </li>
+	            <li><a href="https://www.kaggle.com/cdc/zika-virus-epidemic">Participate in the Kaggle competition</a> </li>
+	            <li><a href="mailto:siddharth.singhal@berkeley.edu;andrewlam@berkeley.edu;nelson.yao@berkeley.edu?subject=The Spread of the Zika Virus Feedback">Share your thoughts and opinions on this visualization
+	            </a> </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="data">
+        <div class="container">
+            <div class="page-header">
+                <h2>The Data</h2>
+            </div>
+            <p>The dataset is publicly available and is maintained by the Centers for Disease Control and Prevention (CDC) to manage the ongoing Zika epidemic. It is provided as a resource to the scientific community engaged in the public health response. However, please note that the data provided here is not official and should be considered preliminary and non-exhaustive. As such, it is advisable to review the original reports and sources, which are provided on the CDC's Zika GitHub repository.</p>
+
+            <p>The dataset used from the CDC's Zika GitHub repository includes the following fields:</p>
+
+            <ul>
+            <li> <b>report_date</b> - The report date is the date that the report was published. The date should be specified in standard ISO format (YYYY-MM-DD).</li>
+            <li> <b>location</b> - A location is specified for each observation following the specific names specified in the country place name database. This may be any place with a 'location_type' as listed below, e.g. city, state, country, etc. It should be specified at up to three hierarchical levels in the following format: [country]-[state/province]-[county/municipality/city], always beginning with the country name. If the data is for a particular city, e.g. Salvador, it should be specified: Brazil-Bahia-Salvador.</li>
+            <li> <b>location_type</b> - A location code is included indicating: city, district, municipality, county, state, province, or country. If there is need for an additional 'location_type', open an Issue to create a new 'location_type'.</li>
+            <li> <b>report_date</b> - The report date is the date that the report was published. The date should be specified in standard ISO format (YYYY-MM-DD).</li>
+            <li> <b>data_field</b> - The data field is a short description of what data is represented in the row and is related to a specific definition defined by the report from which it comes.</li>
+            <li> <b>data_field_code</b> - This code is defined in the country data guide. It includes a two letter country code (ISO-3166 alpha-2, list), followed by a 4-digit number corresponding to a specific report type and data type.</li>
+            <li> <b>time_period</b> - Optional. If the data pertains to a specific period of time, for example an epidemiological week, that number should be indicated here and the type of time period in the 'time_period_type', otherwise it should be NA.</li>
+            <li> <b>time_period_type</b> - Required only if 'time_period' is specified. Types will also be specified in the country data guide. Otherwise should be NA.</li>
+            <li> <b>value</b> - The observation indicated for the specific 'report_date', 'location', 'data_field' and when appropriate, 'time_period'.</li>
+            <li> <b>unit</b> - The unit of measurement for the 'data_field'. This should conform to the 'data_field' unit options as described in the country-specific data guide.</li>
+            </ul>
+
         </div>
     </section>
 
     <section id="other">
         <div class="container">
             <div class="page-header">
-                <h2>Other Data sources</h2>
+                <h2>Additional Resources</h2>
             </div>
-            <h3><a id="user-content-official---international" class="anchor" href="#official---international" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Official - International</h3>
+            <h3>Official - International</h3>
             <p><a href="http://www.cdc.gov/zika/geo/active-countries.html">Centers for Disease Control and Prevention</a> - list of countries with active local transmission</p>
             <p><a href="http://www.paho.org/hq/index.php?option=com_content&amp;view=article&amp;id=11585&amp;Itemid=41688&amp;lang=en">Pan American Health Organization</a> - situation reports</p>
             <p><a href="http://ais.paho.org/phip/viz/ed_zika_epicurve.asp">Pan American Health Organization</a> - epidemic curves dataset</p>
             <p><a href="http://www.who.int/csr/don/archive/disease/zika-virus-infection/en/">World Health Organization</a> - situation reports</p>
             <p><a href="http://ecdc.europa.eu/en/healthtopics/zika_virus_infection/zika-outbreak/Pages/zika-outbreak.aspx">European Centre for Disease Prevention and Control</a> - situation reports</p>
             <p><a href="https://knoema.com/atlas/topics/Zika/datasets">Datasets</a> - other datasets</p>
-            <h3><a id="user-content-official---country" class="anchor" href="#official---country" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Official - Country</h3>
+            <h3>Official - Country</h3>
             <p><a href="http://www.cdc.gov/zika/geo/united-states.html">Centers for Disease Control and Prevention</a> - United States data</p>
             <p><a href="http://www.nhs.uk/Conditions/zika-virus/Pages/Introduction.aspx">NHS</a> Official United Kingdom </p>
             <p><a href="http://www.webmd.com/a-to-z-guides/zika-virus-symptoms-prevention">WebMD</a> Symptoms and prevention</p>
-            <h3><a id="user-content-genetic--genomic" class="anchor" href="#genetic--genomic" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Genetic / Genomic</h3>
+            <h3>Genetic / Genomic</h3>
             <p><a href="http://www.ncbi.nlm.nih.gov/nuccore/?term=zika">National Center for Biotechnology Information - GenBank</a> - sequence data</p>
             <p><a href="http://www.viprbrc.org/brc/home.spg?decorator=flavi_zika">Virus Pathogen Resource</a> - sequence data</p>
             <p><a href="https://dholk.primate.wisc.edu/announcements/dho/public/Zika/public/ZIKV-001-public/thread.view?rowId=116">University of Wisconsin-Madison</a> - sequence and alignment data</p>
             <p><a href="http://www.uniprot.org/uniprot/?query=Zika+virus+&amp;sort=score">Uniprot</a> - unreviewed protein data</p>
-            <p><a href="http://nextstrain.org/zika/">nextstrain</a> - virus phylogeny</p>
-            <h3><a id="user-content-experimental-data" class="anchor" href="#experimental-data" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Experimental data</h3>
+            <p><h3>Experimental data</h3>
             <p><a href="https://dholk.primate.wisc.edu/project/dho/public/Zika/public/ZIKV-001-public/begin.view">University of Wisconsin-Madison</a> - viral shedding in rhesus macaques</p>
             <p><a href="https://zika.labkey.com/announcements/OConnor/thread.view?rowId=101">University of Wisconsin-Madison</a> - Serum antibody epitope mapping</p>
-            <h3><a id="user-content-compiled-by-researchers" class="anchor" href="#compiled-by-researchers" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Compiled by researchers</h3>
+            <h3>Compiled by researchers</h3>
             <p><a href="http://science.sciencemag.org/content/early/2016/07/13/science.aag0219.figures-only#fig-data-additional-files">Countering Zika in Latin America</a> - epidemiological data (DOI: 10.1126/science.aag0219)</p>
-            <p><a href="http://science.sciencemag.org/content/early/2016/03/23/science.aaf5036.figures-only#fig-data-additional-files">Zika virus in the Americas: Early epidemiological and genetic findings</a> - epidemiological data (DOI: 10.1126/science.aaf5036)</p>
-            <h3><a id="user-content-aggregate-news-and-data" class="anchor" href="#aggregate-news-and-data" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Aggregate news and data</h3>
+            <p><h3>Aggregate news and data</h3>
             <p><a href="http://dujour.obc.io/#/?title=Zika%20Information&amp;class-uri=http:%2F%2Fwww.pitt.edu%2Fobc%2FIDE_0000000014&amp;recent-threshold=30">Models of Infectious Disease Agent Study</a> - various Zika-related reports</p>
             <p><a href="https://github.com/BuzzFeedNews/zika-data">BuzzFeed</a> - machine-readable data</p>
             <p><a href="https://flutrackers.com/forum/forum/emerging-diseases-other-health-threats-alphabetical-i-thru-z/zika-virus">Flutrackers</a> - news and commentary</p>
@@ -757,8 +771,41 @@
         </div>
     </section>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <section id="team">
+        <div class="container">
+            <div class="page-header">
+                <h2>Team Members</h2>
+            </div>
+
+		  <div class="col-sm-6 col-md-4">
+		    <div class="thumbnail">
+		      <img src="nelson.jpeg" alt="Team Member">
+		      <div class="caption">
+		        <h3>Nelson Yao</h3>
+		        <p><a href="https://www.linkedin.com/in/nelsonyao/">https://www.linkedin.com/in/nelsonyao/</a></p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-6 col-md-4">
+		    <div class="thumbnail">
+		      <img src="andrew.png" alt="Team Member">
+		      <div class="caption">
+		        <h3>Andrew Lam</h3>
+		        <p><a href="https://www.linkedin.com/in/andrewylam/">https://www.linkedin.com/in/andrewylam/</a></p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-6 col-md-4">
+		    <div class="thumbnail">
+		      <img src="sid.jpeg" alt="Team Member">
+		      <div class="caption">
+		        <h3>Siddharth Singhal</h3>
+		        <p><a href="https://www.linkedin.com/in/siddharthsinghal/">https://www.linkedin.com/in/siddharthsinghal/</a></p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</section>
 
 </body>
 
